@@ -24,7 +24,7 @@ wget http://api.gbif.org/v1/occurrence/download/request/0018310-190415153152247.
 unzip 0018310-190415153152247.zip
 ```
 
-## Step 2: Import the DwCA occurence table into an SQLite database
+## Step 2: Import the DwCA occurrence table into an SQLite database
 ```
 sqlite3 sp.db
 sqlite> .mode csv
