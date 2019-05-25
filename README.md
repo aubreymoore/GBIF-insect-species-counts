@@ -2,6 +2,10 @@
 
 This little project was sparked by a post to ENTOMO-L asking about the number of insect species recorded for each of the United States. It occurred to me that GBIF species occurrence records could be used to get a lower bound estimate for each state. It was surprisingly easy to do this. Simply a matter of downloading all US insect occurrence records as a Darwin core archive (DwCA), importing the **occurrence** table into an SQLite database, and running a couple of queries.
 
+Step 1: Download all US insect occurrence records as a Darwin core archive (DwCA)
+
+GBIF.org (25 May 2019) GBIF Occurrence Download https://doi.org/10.15468/dl.j62zyq
+
 Here are the results:
 ```
 sqlite> -- count the number of species for each state
