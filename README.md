@@ -5,6 +5,10 @@ This little project was sparked by a post to ENTOMO-L asking about the number of
 ## Step 1: Download all US insect occurrence records as a Darwin core archive (DwCA)
 
 GBIF.org (25 May 2019) GBIF Occurrence Download https://doi.org/10.15468/dl.j62zyq
+```
+wget http://api.gbif.org/v1/occurrence/download/request/0018310-190415153152247.zip
+unzip 0018310-190415153152247.zip
+```
 
 ## Step 2: Import the DwCA occurence table into an SQLite database
 ```
