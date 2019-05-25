@@ -15,8 +15,10 @@ step beyond and creates a DOI for you so that the dataset can be properly cited 
 
 GBIF.org (25 May 2019) GBIF Occurrence Download https://doi.org/10.15468/dl.j62zyq
 
-You can download the DwCA manually by clicking on the link on the DOI page or you can use *wget*. You then need to unzip
-the archive. We are only interseted in the *occurrence* table for the cuirrent application.
+The download page informs us that the DwCA contains 8,620,391 occurrence records for insects in the United States.
+
+The DwCA can be downloaded manually by clicking on the link on the DOI page. I prefer to use *wget*. You then need to unzip
+the archive. We are only interseted in the *occurrence* table for the current application.
 ```
 wget http://api.gbif.org/v1/occurrence/download/request/0018310-190415153152247.zip
 unzip 0018310-190415153152247.zip
