@@ -2,11 +2,46 @@
 
 This little project was sparked by a post to ENTOMO-L asking about the number of insect species recorded for each of the United States. It occurred to me that GBIF species occurrence records could be used to get a lower bound estimate for each state. It was surprisingly easy to do this. Simply a matter of downloading all US insect occurrence records as a Darwin core archive (DwCA), importing the **occurrence** table into an SQLite database, and running a couple of queries.
 
-Step 1: Download all US insect occurrence records as a Darwin core archive (DwCA)
+## Step 1: Download all US insect occurrence records as a Darwin core archive (DwCA)
 
 GBIF.org (25 May 2019) GBIF Occurrence Download https://doi.org/10.15468/dl.j62zyq
 
-Here are the results:
+## Step 2: Import the DwCA occurence table into an SQLite database
+```
+sqlite3 sp.db
+sqlite> .mode csv
+sqlite> .separator "\t"
+sqlite> .header on
+sqlite> .import occurrence.txt occurrence
+```
+
+## Step 3: Query the Database
+
+Create a table which contains names of states and all scientific names for insects with
+occurrence records for the states. Note that **taxonRank** must be 'SPECIES'. Insects identified to genus and above 
+and subspecies are not included.
+```
+sqlite> CREATE TABLE state_species AS
+   ...> SELECT stateProvince, scientificName 
+   ...> FROM occurrence
+   ...> WHERE 
+   ...>   taxonRank = 'SPECIES'
+   ...>   AND stateProvince IN (
+   ...>     'Alabama','Alaska','Arizona','Arkansas','California',
+   ...>     'Colorado','Connecticut','Delaware','Florida','Georgia',
+   ...>     'Hawaii','Idaho','Illinois','Indiana','Iowa',
+   ...>     'Kansas','Kentucky','Louisiana','Maine','Maryland',
+   ...>     'Massachusetts','Michigan','Minnesota','Mississippi','Missouri',
+   ...>     'Montana','Nebraska','Nevada','New Hampshire','New Jersey',
+   ...>     'New Mexico','New York','North Carolina','North Dakota','Ohio',
+   ...>     'Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina',
+   ...>     'South Dakota','Tennessee','Texas','Utah','Vermont',
+   ...>     'Virginia','Washington','West Virginia','Wisconsin','Wyoming')
+   ...> GROUP BY stateProvince, scientificName;
+sqlite> -- count the number of species for each state
+```
+
+Count the number records for each state.
 ```
 sqlite> -- count the number of species for each state
 sqlite> .mode column
