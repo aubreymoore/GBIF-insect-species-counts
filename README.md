@@ -52,3 +52,58 @@ Count the number records for each state.
 sqlite3 sp.db < count_species.sql
 ```
 [count_species.sql](count_species.sql)
+
+## Results
+```bash
+aubrey@aubrey-Latitude-7280:~/Desktop/spcount/species_counts$ sqlite3 sp.db < count_species.sql
+Alabama               5172           
+Alaska                7939           
+Arizona               14864          
+Arkansas              3924           
+California            21984          
+Colorado              11747          
+Connecticut           4131           
+Delaware              3046           
+Florida               12453          
+Georgia               5662           
+Hawaii                1169           
+Idaho                 4085           
+Illinois              9745           
+Indiana               5348           
+Iowa                  4621           
+Kansas                6543           
+Kentucky              3879           
+Louisiana             4480           
+Maine                 4604           
+Maryland              6172           
+Massachusetts         8842           
+Michigan              16514          
+Minnesota             4933           
+Mississippi           4309           
+Missouri              4902           
+Montana               3530           
+Nebraska              3244           
+Nevada                3813           
+New Hampshire         5633           
+New Jersey            6368           
+New Mexico            9656           
+New York              9023           
+North Carolina        7989           
+North Dakota          2326           
+Ohio                  7299           
+Oklahoma              6613           
+Oregon                6726           
+Pennsylvania          9030           
+Rhode Island          2379           
+South Carolina        4565           
+South Dakota          2180           
+Tennessee             5908           
+Texas                 16083          
+Utah                  7025           
+Vermont               3850           
+Virginia              7052           
+Washington            7107           
+West Virginia         3438           
+Wisconsin             6171           
+Wyoming               3465 
+```
