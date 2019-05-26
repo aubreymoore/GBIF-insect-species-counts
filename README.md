@@ -26,6 +26,8 @@ unzip 0018310-190415153152247.zip
 
 ## Step 2: Import the DwCA occurrence table into an SQLite database
 
+When I first tried to import the occurrence.txt file into an SQLite database table, many records were rejected
+because they contained unescaped " characters. This was easily fixed by removing all " characters prior to import.
 
 ```
 sed -i 's/\"//g' occurrence.txt
