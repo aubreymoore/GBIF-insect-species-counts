@@ -32,14 +32,8 @@ because they contained unescaped " characters. This was easily fixed by removing
 ```
 sed -i 's/\"//g' occurrence.txt
 ```
-
 ```
-sqlite3 sp.db
-sqlite> .mode csv
-sqlite> .separator "\t"
-sqlite> .header on
-sqlite> .import occurrence.txt occurrence
-```
+sqlite3 sp.db import_occurrences
 
 ## Step 3: Query the Database
 
