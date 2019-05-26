@@ -56,7 +56,6 @@ sqlite> CREATE TABLE state_species AS
    ...>     'South Dakota','Tennessee','Texas','Utah','Vermont',
    ...>     'Virginia','Washington','West Virginia','Wisconsin','Wyoming')
    ...> GROUP BY stateProvince, scientificName;
-sqlite> -- count the number of species for each state
 ```
 
 Count the number records for each state.
