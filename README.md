@@ -37,6 +37,14 @@ sqlite3 sp.db < import_occurrences.sql
 ```
 [import_occurrences.sql](import_occurrences.sql)
 
+Count the number of records in the *occurrence* table.
+```
+sqlite3 sp.db < count_occurrences.sql
+```
+[count_occurrences.sql](count_occurrences.sql)
+
+This query returns 8,620,377. Very close to 8,620,391 reported by GBIF.
+
 ## Step 3: Query the Database
 
 Create a table which contains names of states and all scientific names for insects with
