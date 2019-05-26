@@ -45,7 +45,7 @@ and subspecies are not included.
 ```
 sqlite3 sp.db < create_state_species_table.sql
 ```
-[create_state_species_table](create_state_species_table.sql)
+[create_state_species_table.sql](create_state_species_table.sql)
 
 Count the number records for each state.
 ```
