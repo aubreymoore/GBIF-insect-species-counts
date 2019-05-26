@@ -25,6 +25,12 @@ unzip 0018310-190415153152247.zip
 ```
 
 ## Step 2: Import the DwCA occurrence table into an SQLite database
+
+
+```
+sed -i 's/\"//g' occurrence.txt
+```
+
 ```
 sqlite3 sp.db
 sqlite> .mode csv
