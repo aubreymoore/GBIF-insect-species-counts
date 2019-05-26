@@ -33,7 +33,7 @@ because they contained unescaped " characters. This was easily fixed by removing
 sed -i 's/\"//g' occurrence.txt
 ```
 ```
-sqlite3 sp.db import_occurrences
+sqlite3 sp.db < import_occurrences.sql
 ```
 
 ## Step 3: Query the Database
