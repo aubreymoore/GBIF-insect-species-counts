@@ -37,7 +37,7 @@ sqlite3 sp.db < import_occurrences.sql
 ```
 [import_occurrences.sql](import_occurrences.sql)
 
-Count the number of records in the *occurrence* table.
+Let's count the number of records in the imported into the *occurrence* table.
 ```
 sqlite3 sp.db < count_occurrences.sql
 ```
