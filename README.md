@@ -61,7 +61,6 @@ sqlite> -- count the number of species for each state
 
 Count the number records for each state.
 ```
-sqlite> -- count the number of species for each state
 sqlite> .mode column
 sqlite> .width 20 15
 sqlite> SELECT stateProvince, count(*) AS species_count
