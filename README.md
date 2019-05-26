@@ -34,6 +34,7 @@ sed -i 's/\"//g' occurrence.txt
 ```
 ```
 sqlite3 sp.db import_occurrences
+```
 
 ## Step 3: Query the Database
 
