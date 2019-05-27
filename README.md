@@ -118,6 +118,7 @@ Wyoming               3465
 *sp.db* is humongous (11.5 GB) and there may be little reason to leave it on disk. Let's export the *state_species* table to a new database, *state_species.db* and delete *sp.db*.
 ```
 sqlite3 sp.db ".dump state_species" | sqlite3 state_species.db
+rm sp.db
 ```
 This new database is 17.0 MB. It is essentially a checklist of insect species recorded for each state.
 ```
