@@ -115,3 +115,8 @@ West Virginia         3438
 Wisconsin             6171           
 Wyoming               3465 
 ```
+
+## Cleanup
+```
+sqlite3 sp.db ".dump state_species" | sqlite3 new.db
+```
