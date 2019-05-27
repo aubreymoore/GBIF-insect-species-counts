@@ -115,7 +115,7 @@ Wyoming               3465
 
 ## Cleanup
 
-*sp.db* is humongous (11.5 GB) and there may be little reason to leave it on disk. Let's export the *state_species* table to a new database, *state_species.db* and delete *sp.db*.
+Weighing in at 11.5 GB, *sp.db* is humongous and there may be little reason to leave it on disk. Let's export the *state_species* table to a new database, *state_species.db* and delete *sp.db*.
 ```
 sqlite3 sp.db ".dump state_species" | sqlite3 state_species.db
 rm sp.db
