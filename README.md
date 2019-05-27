@@ -59,9 +59,7 @@ sqlite3 sp.db < count_species.sql
 ```
 [count_species.sql](count_species.sql)
 
-## Results
-```bash
-aubrey@aubrey-Latitude-7280:~/Desktop/spcount/species_counts$ sqlite3 sp.db < count_species.sql
+Results
 Alabama               5172           
 Alaska                7939           
 Arizona               14864          
@@ -124,6 +122,11 @@ This new database is essentially a checklist of insect species for each state.
 ```
 sqlite3 state_species.db "SELECT * FROM state_species WHERE stateProvince='California' LIMIT 5;"
 ```
-Results
+Results:
 ```
+California|Ababactus pallidiceps Casey, 1886
+California|Abaeis nicippe (Cramer, 1779)
+California|Abagrotis apposita Grote, 1878
+California|Abagrotis baueri McDunnough, 1949
+California|Abagrotis denticulata McDunnough, 1946
 ```
