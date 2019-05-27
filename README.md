@@ -60,6 +60,7 @@ sqlite3 sp.db < count_species.sql
 [count_species.sql](count_species.sql)
 
 Results
+```
 Alabama               5172           
 Alaska                7939           
 Arizona               14864          
