@@ -39,10 +39,8 @@ sqlite3 sp.db < import_occurrences.sql
 
 Let's count the number of records in the imported into the *occurrence* table.
 ```
-sqlite3 sp.db < count_occurrences.sql
+sqlite3 sp.db "SELECT COUNT(*) FROM occurrence;"
 ```
-[count_occurrences.sql](count_occurrences.sql)
-
 This query returns 8,620,377. Very close to 8,620,391 reported by GBIF.
 
 ## Step 3: Query the Database
