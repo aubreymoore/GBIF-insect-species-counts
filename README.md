@@ -59,7 +59,7 @@ sqlite3 sp.db < count_species.sql
 ```
 [count_species.sql](count_species.sql)
 
-Results
+Results:
 ```
 Alabama               5172           
 Alaska                7939           
@@ -115,11 +115,11 @@ Wyoming               3465
 
 ## Cleanup
 
-*sp.db* is humongous (11.5 GB) and there may be little reason to leave it on disk. Let's export the state_species table to a new database, *state_species.db* and delete *sp.db*.
+*sp.db* is humongous (11.5 GB) and there may be little reason to leave it on disk. Let's export the *state_species* table to a new database, *state_species.db* and delete *sp.db*.
 ```
 sqlite3 sp.db ".dump state_species" | sqlite3 state_species.db
 ```
-This new database is essentially a checklist of insect species for each state.
+This new database is 17.0 MB. It is essentially a checklist of insect species recorded for each state.
 ```
 sqlite3 state_species.db "SELECT * FROM state_species WHERE stateProvince='California' LIMIT 5;"
 ```
