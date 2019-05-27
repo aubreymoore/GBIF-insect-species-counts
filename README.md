@@ -6,7 +6,7 @@ This little project was sparked by a post to ENTOMO-L asking about the number of
 
 GBIF makes it very easy to download biodiversity data
 * Open the GBIF occurences page: https://www.gbif.org/occurrence
-* setting a filter using the left hand panel. We want to select *Insecta* for *Scientific name* and *United States of America* for *Country or area*
+* Set a filter using the left hand panel. We want to select *Insecta* for *Scientific name* and *United States of America* for *Country or area*
 * Click on the *Download* button on the header of the main panel (You will be asked to log in or register).
 * Click on the Darwin core archive download button.
 
