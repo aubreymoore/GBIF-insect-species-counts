@@ -122,4 +122,8 @@ sqlite3 sp.db ".dump state_species" | sqlite3 state_species.db
 ```
 This new database is essentially a checklist of insect species for each state.
 ```
-sqlite3 state_species "SELECT * WHERE stateProvince='California' LIMIT 10;"
+sqlite3 state_species.db "SELECT * FROM state_species WHERE stateProvince='California' LIMIT 5;"
+```
+Results
+```
+```
